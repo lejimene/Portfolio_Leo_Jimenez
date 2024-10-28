@@ -23,7 +23,7 @@ export function Resume_Banner() {
         {/* Photo */}
         <img
           src="/path_to_your_image.jpg"
-          alt="Leo's Photo"
+          alt="In Progress, No photo as of yet"
           className="rounded-full w-1/5 h-1/5 object-cover bg-black"
         />
       </div>

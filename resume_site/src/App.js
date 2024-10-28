@@ -9,49 +9,56 @@ import Resume_Banner from './Front_End/title_banner';
 //Thus we will be using a array to explain our information and load that array
 //into our site
 
-const projects = [
-
+const projects =[
   {
-      title: "LLC Restaurant/Deli Website",
-      description: `I created a website to showcase a Mexican restaurant/deli I had worked at to provide them a website to give
-      more coverage especially online. Giving a website that showcases menu items and prices. This by giving data from MySQL and updating it if needed.
-      Another thing is it must handle the difference in languages as customers are mainly Spanish speakers and thus we must handle rendering only 
-      Spanish items and descriptions if they choose to see in Spanish.`,
-      tags: ["Personal Project", "Python", "Django", "HTML", "CSS", "Javascript", "MySQL"],
-      photos: "url" // Replace "url" with the actual image URL
+    title: "LLC Restaurant/Deli Website",
+    description: `A dynamic website for a Mexican restaurant, designed to enhance their online visibility and 
+    customer engagement. Built with Django and MySQL, it provides real-time menu updates, seamless bilingual support 
+    (English and Spanish), and an intuitive interface for easy language switching. This project demonstrates my skills 
+    in backend and database integration, along with handling cross-language support for a diverse user base. Deployment 
+    is in progress, with a dedicated domain already secured.`,
+    tags: ["Personal Project", "Python", "Django", "HTML", "CSS", "JavaScript", "MySQL"],
+    photos: "url" // Replace "url" with the actual image URL
   },
   {
-      title: "Wealth Wise Website",
-      description: `My team consisting of four other students created a financial diary website of sorts that the user will add by input and
-      will show graphs for amount used per month, goals that the user has, and how far they are within the goal like how much is left with a pie graph. 
-      This website must also work with mobile devices. This assignment had us follow a PM and create user stories and task stories before
-      starting our assignment. This included creating a Figma. The assignment's frontend was my main focus.`,
-      tags: ["School Project", "React", "MySQL", "CSS", "PHP", "Figma"],
-      photos: "url" // Replace "url" with the actual image URL
+    title: "Wealth Wise Website",
+    description: `A collaborative financial tracking tool built for desktop and mobile. Created with a team of four 
+    students, this web app allows users to input expenses, set financial goals, and visualize spending trends with graphs.
+     My primary focus was on the React-based frontend, ensuring responsive design and smooth user interactions.
+      We used MySQL for data management and followed Agile practices, including user stories and Figma-based design 
+      prototyping.`,
+    tags: ["School Project", "React", "MySQL", "CSS", "PHP", "Figma"],
+    photos: "url" // Replace "url" with the actual image URL
   },
   {
-      title: "Marketplace Talriz Website",
-      description: `My team consisting of three other students is tasked with creating a website that handles making a marketplace system. This involves
-      creating login and registration. Creating a like system and selling and auctioning system. This also means handling SQL injection issues and 
-      XSRF issues. Trying to fix any security issues.`,
-      tags: ["School Project", "Python", "Django", "HTML", "CSS", "Javascript", "MySQL", "Docker"],
-      photos: "url" // Replace "url" with the actual image URL
+    title: "Marketplace Talriz Website",
+    description: `Developed a secure marketplace platform with a team of three, implementing core e-commerce features 
+    like login/registration, a product auctioning system, and a user 'like' system. Security was a high priority, 
+    with measures to prevent SQL injection and XSRF attacks. Built using Django and MySQL, with Docker for 
+    streamlined deployment and testing, showcasing my skills in security best practices and team-based development.`,
+    tags: ["School Project", "Python", "Django", "HTML", "CSS", "JavaScript", "MySQL", "Docker"],
+    photos: "url" // Replace "url" with the actual image URL
   },
   {
-      title: "Resume Website",
-      description: `Current website that handles showcasing my projects and basically showing all of my work. This meant making it mobile-friendly and clean to read.`,
-      tags: ["Personal Project", "React", "CSS"],
-      photos: "url" // Replace "url" with the actual image URL
+    title: "Resume Website",
+    description: `A personal website designed to showcase my portfolio, skills, and projects in a clean, 
+    mobile-friendly format. Built with React and styled with CSS, this website serves as a central hub for 
+    prospective employers and collaborators to view my technical work and accomplishments. Emphasis on responsive 
+    design ensures a consistent experience across devices.`,
+    tags: ["Personal Project", "React", "CSS"],
+    photos: "url" // Replace "url" with the actual image URL
   },
   {
-    title: "Mp3 Youtube Downloader",
-    description: `Personal project Using Tkinter and some python
-    I created a downloader allowing for multiple downloads to occur while
-    disabling duplicates and allowing for adding tags inputs such as Artist name, Album Name, Changing volume by decibel, and Song name`,
+    title: "MP3 YouTube Downloader",
+    description: `A Python-based desktop application created with Tkinter, allowing users to download and tag MP3 
+    files from YouTube videos. The app supports batch downloads, prevents duplicate downloads, and includes custom 
+    tagging options for artist, album, and song name, along with audio adjustments by decibel. This project highlights 
+    my skills in Python, GUI development, and user-focused software design.`,
     tags: ["Personal Project", "Python", "Tkinter"],
     photos: "url" // Replace "url" with the actual image URL
-},
+  },
 ];
+
 
 
 
