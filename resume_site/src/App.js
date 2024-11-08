@@ -19,6 +19,7 @@ const projects =[
     is in progress, with a dedicated domain already secured.`,
     tags: ["Personal Project", "Python", "Django", "HTML", "CSS", "JavaScript", "MySQL"],
     photos: "url" // Replace "url" with the actual image URL
+  
   },
   {
     title: "Wealth Wise Website",
@@ -29,6 +30,7 @@ const projects =[
       prototyping.`,
     tags: ["School Project", "React", "MySQL", "CSS", "PHP", "Figma"],
     photos: "url" // Replace "url" with the actual image URL
+  
   },
   {
     title: "Marketplace Talriz Website",
@@ -37,7 +39,8 @@ const projects =[
     with measures to prevent SQL injection and XSRF attacks. Built using Django and MySQL, with Docker for 
     streamlined deployment and testing, showcasing my skills in security best practices and team-based development.`,
     tags: ["School Project", "Python", "Django", "HTML", "CSS", "JavaScript", "MySQL", "Docker"],
-    photos: "url" // Replace "url" with the actual image URL
+    photos: "url", // Replace "url" with the actual image URL
+    githubLink: "https://github.com/lejimene/Talriz"
   },
   {
     title: "Resume Website",
@@ -47,6 +50,7 @@ const projects =[
     design ensures a consistent experience across devices.`,
     tags: ["Personal Project", "React", "CSS"],
     photos: "url" // Replace "url" with the actual image URL
+  
   },
   {
     title: "MP3 YouTube Downloader",
@@ -55,7 +59,8 @@ const projects =[
     tagging options for artist, album, and song name, along with audio adjustments by decibel. This project highlights 
     my skills in Python, GUI development, and user-focused software design.`,
     tags: ["Personal Project", "Python", "Tkinter"],
-    photos: "url" // Replace "url" with the actual image URL
+    photos: "url", // Replace "url" with the actual image URL
+    githubLink: "https://github.com/lejimene/Simple-Youtube-to-MP3-Downloader"
   },
 ];
 
@@ -67,14 +72,17 @@ function App() {
       <div className="flex flex-wrap justify-center bg-slate-50">
         <Resume_Banner/>
         <div className="flex justify-center place-items-center gap-2 w-screen "><LinkdnButtonsText/><GithubButtonsText/><InstagramButtonsText/></div>
-          {projects.map((project, index) => (
-            <ProjectBox
-            title={project.title}
-            description={project.description}
-            image={project.photos}
-            tags={project.tags}
+        {projects.map((project, index) => (
+          <ProjectBox
+              key={index}
+              title={project.title}
+              description={project.description}
+              image={project.photos}
+              tags={project.tags}
+              projectLink={project.projectLink}
+              githubLink={project.githubLink}
           />
-          ))}
+      ))}
       </div>
   );
 }

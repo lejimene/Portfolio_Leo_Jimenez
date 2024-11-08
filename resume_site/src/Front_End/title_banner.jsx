@@ -24,7 +24,8 @@ export function Resume_Banner() {
         <img
           src="/path_to_your_image.jpg"
           alt="In Progress, No photo as of yet"
-          className="rounded-full w-1/5 h-1/5 object-cover bg-black"
+          className="rounded-sm max-w-64 w-4/5  h-72
+           object-cover bg-black"
         />
       </div>
     </div>

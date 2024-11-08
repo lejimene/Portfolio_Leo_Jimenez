@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import './tailwind.css';
 
+function ProjectBox({ title, description, image, tags, projectLink, githubLink }) {
+    const [isExpanded, setIsExpanded] = useState(false);
 
-
-
-function ProjectBox({ title, description, image, tags }) {
     const tagColors = {
         "Personal Project": "bg-blue-300",
         "School Project": "bg-green-500",
         "Python": "bg-teal-300",
         "Tkinter": "bg-blue-500",
-        "Javascript": "bg-yellow-400", 
+        "JavaScript": "bg-yellow-400",
         "Django": "bg-lime-300",
         "HTML": "bg-orange-600",
         "CSS": "bg-sky-400",
@@ -20,12 +19,25 @@ function ProjectBox({ title, description, image, tags }) {
         "PHP": "bg-amber-950",
         "Figma": "bg-rose-400",
     };
+
+    const toggleDescription = () => {
+        setIsExpanded(!isExpanded);
+    };
+
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg border-l-indigo-300 m-4 font-dongle bg-sky-200" >
+        <div className="max-w-sm min-h-[400px] rounded overflow-hidden shadow-lg border-l-indigo-300 m-4 font-dongle bg-sky-200">
             <img className="w-full h-48 object-cover" src={image} alt={title} />
             <div className="px-6 py-4">
                 <div className="font-bold text-5xl mb-2">{title}</div>
-                <p className="text-gray-700 text-2xl">{description}</p>
+                <p className={`text-gray-700 text-2xl ${isExpanded ? "" : "line-clamp-4"}`}>
+                    {description}
+                </p>
+                <button
+                    onClick={toggleDescription}
+                    className="text-blue-500 hover:text-blue-700 text-xl underline mt-2"
+                >
+                    {isExpanded ? "Show Less" : "Read More"}
+                </button>
             </div>
             <div className="px-6 pt-4 pb-2">
                 {tags.map((tag, index) => (
@@ -37,13 +49,30 @@ function ProjectBox({ title, description, image, tags }) {
                     </span>
                 ))}
             </div>
-            <div className="px-6 pt-4 pb-2">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold text-2xl py-2 px-4 rounded">
-                    View Project
-                </button>
+            <div className="px-6 pt-4 pb-2 flex gap-2">
+                {projectLink && (
+                    <a
+                        href={projectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-green-500 hover:bg-green-700 text-white font-bold text-2xl py-2 px-4 rounded"
+                    >
+                        View Project
+                    </a>
+                )}
+                {githubLink && (
+                    <a
+                        href={githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gray-800 hover:bg-gray-900 text-white font-bold text-2xl py-2 px-4 rounded"
+                    >
+                        GitHub
+                    </a>
+                )}
             </div>
         </div>
     );
 }
-export default ProjectBox
 
+export default ProjectBox;
