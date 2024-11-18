@@ -5,6 +5,8 @@ import ProjectBox  from './Front_End/projects_box';
 import {InstagramButtonsText, GithubButtonsText,LinkdnButtonsText} from './Front_End/Socials_button';
 import Resume_Banner from './Front_End/title_banner';
 
+import in_devlopment from ".//images/in_development.png"
+
 // Since this is a resume website we dont need multiple pages
 //Thus we will be using a array to explain our information and load that array
 //into our site
@@ -18,7 +20,7 @@ const projects =[
     in backend and database integration, along with handling cross-language support for a diverse user base. Deployment 
     is in progress, with a dedicated domain already secured.`,
     tags: ["Personal Project", "Python", "Django", "HTML", "CSS", "JavaScript", "MySQL"],
-    photos: "url" // Replace "url" with the actual image URL
+    photos: in_devlopment // Replace "url" with the actual image URL
   
   },
   {

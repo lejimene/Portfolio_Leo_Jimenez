@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import './tailwind.css';
+import { useInView } from 'react-intersection-observer';  // Import the hook
 
 function ProjectBox({ title, description, image, tags, projectLink, githubLink }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
+    // Tag color mapping
     const tagColors = {
         "Personal Project": "bg-blue-300",
         "School Project": "bg-green-500",
@@ -20,12 +21,22 @@ function ProjectBox({ title, description, image, tags, projectLink, githubLink }
         "Figma": "bg-rose-400",
     };
 
+    // Toggle for description expansion
     const toggleDescription = () => {
         setIsExpanded(!isExpanded);
     };
 
+    // Intersection Observer to trigger animation
+    const { ref, inView } = useInView({
+        triggerOnce: true,  // Only trigger when the element first enters the view
+        threshold: 0.5,     // Trigger when 50% of the element is in the viewport
+    });
+
     return (
-        <div className="max-w-sm min-h-[400px] rounded overflow-hidden shadow-lg border-l-indigo-300 m-4 font-dongle bg-sky-200">
+        <div 
+            ref={ref} 
+            className={`max-w-sm min-h-[400px] rounded overflow-hidden shadow-lg border-l-indigo-300 m-4 font-dongle bg-sky-200 transition-all duration-700 ease-out transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+        >
             <img className="w-full h-48 object-cover" src={image} alt={title} />
             <div className="px-6 py-4">
                 <div className="font-bold text-5xl mb-2">{title}</div>
