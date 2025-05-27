@@ -6,19 +6,20 @@ function ProjectBox({ title, description, image, tags, projectLink, githubLink }
 
     // Tag color mapping
     const tagColors = {
-        "Personal Project": "bg-blue-300",
-        "School Project": "bg-green-500",
-        "Python": "bg-teal-300",
+        "Personal Project": "bg-blue-400",
+        "Academic Project": "bg-green-500",
+        "Python": "bg-teal-400",
         "Tkinter": "bg-blue-500",
         "JavaScript": "bg-yellow-400",
-        "Django": "bg-lime-300",
+        "Django": "bg-lime-600",
         "HTML": "bg-orange-600",
         "CSS": "bg-sky-400",
-        "React": "bg-blue-400",
+        "React": "bg-blue-600",
         "MySQL": "bg-red-500",
         "Docker": "bg-gray-500",
         "PHP": "bg-amber-950",
         "Figma": "bg-rose-400",
+        "Solidity": "bg-rose-500",
     };
 
     // Toggle for description expansion
@@ -37,7 +38,7 @@ function ProjectBox({ title, description, image, tags, projectLink, githubLink }
             ref={ref} 
             className={`max-w-sm min-h-[400px] rounded overflow-hidden shadow-lg border-l-indigo-300 m-4 font-dongle bg-sky-200 transition-all duration-700 ease-out transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-            <img className="w-full h-48 object-cover" src={image} alt={title} />
+            {/* <img className="w-full h-48 object-cover" src={image} alt={title} /> */}
             <div className="px-6 py-4">
                 <div className="font-bold text-5xl mb-2">{title}</div>
                 <p className={`text-gray-700 text-2xl ${isExpanded ? "" : "line-clamp-4"}`}>

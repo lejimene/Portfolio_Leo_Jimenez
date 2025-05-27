@@ -1,5 +1,6 @@
 import React from "react";
 import './tailwind.css';
+import PhotoImage from "../images/Face_Photo.png"
 
 export function Resume_Banner() {
   return (
@@ -10,26 +11,46 @@ export function Resume_Banner() {
           Welcome to My Portfolio
         </h1>
       </div>
-      
+
       {/* Description and Photo Section */}
-      <div className="flex flex-col md:flex-row justify-center items-center rounded shadow-lg bg-cream m-4 p-2.5">
+      <div className="flex flex-col md:flex-row justify-center items-center rounded shadow-lg bg-cream m-4 p-2.5 gap-6">
         {/* Description */}
-        <p className="text-center bg-slate-300 text-3xl text-gray-700 w-5/12 min-w-80 m-4 rounded-lg p-3">
-          Welcome to my Portfolio Website. My name is Leo Jimenez or Leonardo Jimenez. I'm a student
-          at the Universtiy at Buffalo studying computer science. I have been fascinated in website building
-          but also making life easier. 
-        </p>
-        
+        <div className="bg-slate-300 text-gray-700 rounded-lg p-5 md:mr-14 w-full md:w-9/12 max-w-5xl">
+          <h2 className="text-4xl mb-3 text-center text-neutral-800 animate-fadeInUp">
+            About Me
+          </h2>
+          <p className="text-3xl text-center">
+            Hello, my name is Leonardo Jimenez, or Leo for short. 
+            <br /><br />
+            I'm a recent Computer Science graduate from the University at Buffalo blending 
+            technical expertise with a passion for creativity. I enjoy web development because of its ability to merge innovation with accessibility.
+             Allowing me to build platforms that have functionality and engage everyone together.
+             <br /><br />
+            Beyond coding, I enjoy the balance of mindful simplicity and competitive energy. 
+            Whether it's listening to the calming rush of rivers or creeks, strategizing in 
+            League of Legends, or diving into creativity with Minecraft. I appreciate how technology 
+            can make life easier, more efficient, and fun and connect everyone together. 
+            <br /><br />
+            Feel free to check my work below on the projects I have worked on.
+            <br /><br />
+            Let's connect and create something meaningful. 
+
+          </p>
+        </div>
+
         {/* Photo */}
-        <img
-          src="/path_to_your_image.jpg"
-          alt="In Progress, No photo as of yet"
-          className="rounded-sm max-w-64 w-4/5  h-72
-           object-cover bg-black"
-        />
+      <div className="relative rounded-2xl p-1 bg-gradient-to-tr from-blue-300 via-purple-300 to-pink-300 shadow-xl">
+        <div className="rounded-2xl bg-white/10 backdrop-blur-md p-1">
+          <img
+            src={PhotoImage}
+            alt="Photo of me"
+            className="rounded-xl w-80 h-96 object-cover shadow-md"
+          />
+        </div>
+      </div>
       </div>
     </div>
   );
 }
 
-export default Resume_Banner
+export default Resume_Banner;

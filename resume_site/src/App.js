@@ -5,22 +5,35 @@ import ProjectBox  from './Front_End/projects_box';
 import {InstagramButtonsText, GithubButtonsText,LinkdnButtonsText} from './Front_End/Socials_button';
 import Resume_Banner from './Front_End/title_banner';
 
-import in_devlopment from ".//images/in_development.png"
+// import in_devlopment from ".//images/in_development.png"
 
 // Since this is a resume website we dont need multiple pages
 //Thus we will be using a array to explain our information and load that array
 //into our site
 
 const projects =[
+    {
+    title: "MedToken",
+    description: `A decentralized Web3 application that enables patients to
+     create and share NFTs representing encrypted electronic health 
+     records (EHRs). Patients can grant or revoke access to doctors 
+     at any time through smart contract based permissions. The system uses APIs
+      like Pinata for IPFS data storage and Infura for blockchain
+       connectivity, and operates on the Sepolia testnet for 
+       Ethereum transactions.`,
+    tags: ["Academic Project", "Solidity", "React", "CSS", "JavaScript", ],
+    // photos: in_devlopment // Replace "url" with the actual image URL
+    githubLink: "https://github.com/lejimene/CSE-blockchain-TokenMed"
+  },
   {
-    title: "LLC Restaurant/Deli Website",
+    title: "LLC Restaurant/Deli Website (In progress)",
     description: `A dynamic website for a Mexican restaurant, designed to enhance their online visibility and 
     customer engagement. Built with Django and MySQL, it provides real-time menu updates, seamless bilingual support 
     (English and Spanish), and an intuitive interface for easy language switching. This project demonstrates my skills 
     in backend and database integration, along with handling cross-language support for a diverse user base. Deployment 
     is in progress, with a dedicated domain already secured.`,
     tags: ["Personal Project", "Python", "Django", "HTML", "CSS", "JavaScript", "MySQL"],
-    photos: in_devlopment // Replace "url" with the actual image URL
+    // photos: in_devlopment // Replace "url" with the actual image URL
   
   },
   {
@@ -30,8 +43,8 @@ const projects =[
      My primary focus was on the React-based frontend, ensuring responsive design and smooth user interactions.
       We used MySQL for data management and followed Agile practices, including user stories and Figma-based design 
       prototyping.`,
-    tags: ["School Project", "React", "MySQL", "CSS", "PHP", "Figma"],
-    photos: "url" // Replace "url" with the actual image URL
+    tags: ["Academic Project", "React", "MySQL", "CSS", "PHP", "Figma"],
+    // photos: "url" // Replace "url" with the actual image URL
   
   },
   {
@@ -40,8 +53,8 @@ const projects =[
     like login/registration, a product auctioning system, and a user 'like' system. Security was a high priority, 
     with measures to prevent SQL injection and XSRF attacks. Built using Django and MySQL, with Docker for 
     streamlined deployment and testing, showcasing my skills in security best practices and team-based development.`,
-    tags: ["School Project", "Python", "Django", "HTML", "CSS", "JavaScript", "MySQL", "Docker"],
-    photos: "url", // Replace "url" with the actual image URL
+    tags: ["Academic Project", "Python", "Django", "HTML", "CSS", "JavaScript", "MySQL", "Docker"],
+    // photos: "url", // Replace "url" with the actual image URL
     githubLink: "https://github.com/lejimene/Talriz"
   },
   {
@@ -51,7 +64,7 @@ const projects =[
     prospective employers and collaborators to view my technical work and accomplishments. Emphasis on responsive 
     design ensures a consistent experience across devices.`,
     tags: ["Personal Project", "React", "CSS"],
-    photos: "url" // Replace "url" with the actual image URL
+    // photos: "url" // Replace "url" with the actual image URL
   
   },
   {
@@ -61,7 +74,7 @@ const projects =[
     tagging options for artist, album, and song name, along with audio adjustments by decibel. This project highlights 
     my skills in Python, GUI development, and user-focused software design.`,
     tags: ["Personal Project", "Python", "Tkinter"],
-    photos: "url", // Replace "url" with the actual image URL
+    // photos: "url", // Replace "url" with the actual image URL
     githubLink: "https://github.com/lejimene/Simple-Youtube-to-MP3-Downloader"
   },
 ];
@@ -79,7 +92,7 @@ function App() {
               key={index}
               title={project.title}
               description={project.description}
-              image={project.photos}
+              // image={project.photos}
               tags={project.tags}
               projectLink={project.projectLink}
               githubLink={project.githubLink}
