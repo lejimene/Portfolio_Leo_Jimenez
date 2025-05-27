@@ -1,9 +1,0 @@
-npm start to start it
-
-npm run build 0 bundles app into static files for production
-
-npm test - starts the test runner
-
-
-
-npm install -D tailwindcss postcss autoprefixer
